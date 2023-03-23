@@ -1,5 +1,6 @@
 package pila;
 
+import javax.swing.JOptionPane;
 
 public class Pila {
 	
@@ -28,7 +29,7 @@ public class Pila {
 	}
 	
 	//Metodo para extraer un nodo de la pila
-	public int EliminaNodo() {
+	public int ExtraeNodo() {
 		int valor = UltimoNodo.informacion;
 		UltimoNodo=UltimoNodo.siguiente; //hace que UltimoNodo sea el indice del anterior nodo en la lista
 		tamaño--; //reduce el tamaño de la lista
@@ -50,11 +51,11 @@ public class Pila {
 	public void ValoresLista() {
 		Nodo ultimo = UltimoNodo;
 		
-		while (ultimo.siguiente != null) {
-			Lista += ultimo.informacion + "/n"; //Va añadiendo a la lista el valor de la información más un salto de linea para que sea más legible.
+		while (ultimo != null) {
+			Lista += ultimo.informacion + "\n"; //Va añadiendo a la lista el valor de la información más un salto de linea para que sea más legible.
 			ultimo = ultimo.siguiente; //Cambia el nodo al siguiente nodo en la lista, el que está debajo en la pila.
 		}
-		System.out.println(Lista);
+		JOptionPane.showMessageDialog(null, Lista);;
 		Lista = ""; /*Limpia la lista para que si en el futuro cambian los valores de la pila porque se añadan o se extraigan,
 		al volver a llamar este método muestre los valores actuales, no todos los que han pasado por la lista*/
 		

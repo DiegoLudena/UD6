@@ -1,6 +1,6 @@
 package colecciones;
 
-import java.util.ArrayDeque;
+import java.util.LinkedList;
 import java.util.Queue;
 
 import javax.swing.JOptionPane;
@@ -10,14 +10,14 @@ public class Cola {
 
 	public static void main(String[] args) {
 		
-		Queue <String> cola =  new ArrayDeque<>(); //creo la cola
+		Queue <String> cola =  new LinkedList<>(); //creo la cola
 		int opcion = 0;
 	
 	do {
 		try {
 			opcion = Integer.parseInt(JOptionPane.showInputDialog(null,"Menú de Opciones\n\n"
-                    + "1. Insertar un nodo\n"
-                    + "2. Extraer un nodo\n"
+                    + "1. Insertar un valor\n"
+                    + "2. Extraer un valor\n"
                     + "3. Estado de la cola\n"
                     + "4. Extraer el primer valor en la cola\n"             
                     + "5. Mostrar contenido de la cola\n"

@@ -23,7 +23,7 @@ public class Principal {
 			switch(opcion) {
 			case 1:
                 nodo = Integer.parseInt(JOptionPane.showInputDialog(null, 
-                        "Porfavor ingresa el valor a guardar en el nodo")); //JOptionPane.showInputDialog guarda variables tipo String y necesito Int, cambio el tipo de dato
+                        "Por favor ingresa el valor a guardar en el nodo")); //JOptionPane.showInputDialog guarda variables tipo String y necesito Int, cambio el tipo de dato
                 cola.InsertarNodo(nodo);				
 				break;
 			case 2:
